@@ -2,7 +2,7 @@
 
 Get current DateTime in GMT from internet (example.com or google.com) and return DateTime in UTC.
 
-This package provides an easy way to get the current DateTime in UTC from the internet. It will get DateTime from the headers of https://example.com as primary and https://google.com if the primary gives error.
+This package provides an easy way to get the current DateTime in UTC from the internet. It will get DateTime from the headers of <https://example.com> as primary and <https://google.com> if the primary gives error.
 
 Usage:
 
