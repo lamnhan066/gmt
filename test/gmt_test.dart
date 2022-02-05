@@ -3,6 +3,6 @@ import 'package:test/test.dart';
 
 void main() {
   test('getPlatformVersion', () async {
-    print(await GMT.now());
+    print(await GMT.now(returnLocalIfError: true));
   });
 }

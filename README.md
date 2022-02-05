@@ -1,15 +1,23 @@
-# gmt
+# GMT
 
-A new flutter plugin project.
+Get current DateTime in GMT from internet (example.com or google.com) and return DateTime in UTC.
 
-## Getting Started
+This package provides an easy way to get the current DateTime in UTC from the internet. It will get DateTime from the headers of https://example.com as primary and https://google.com if the primary gives error.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Usage:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+``` dart
+var now = await GMT.now();
+```
 
+If you want to get local DateTime if it gives error then using (default is return `null`):
+
+``` dart
+var now = await GMT.now(returnLocalIfError: true); // Default is false
+```
+
+You can also set a timeout for it by using:
+
+``` dart
+var now = await GMT.now(returnLocalIfError: true, timeout: const Duration(seconds: 5)); // Default is false
+```
