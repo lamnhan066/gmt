@@ -10,7 +10,7 @@ Usage:
 var now = await GMT.now();
 ```
 
-If you want to get local DateTime if it gives error then using (default is return `null`):
+If you want to get local DateTime if it gives error or timeout then using (default is return `null`):
 
 ``` dart
 var now = await GMT.now(returnLocalIfError: true); // Default is false

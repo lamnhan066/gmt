@@ -19,7 +19,7 @@ class GMT {
       }
     } catch (_) {}
     if (now == null && returnLocalIfError) {
-      return DateTime.now();
+      return DateTime.now().toUtc();
     }
     return now;
   }
