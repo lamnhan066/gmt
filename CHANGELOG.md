@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Bug fixed: Error on web platform.
+
 ## 0.1.0
 
 * Supported web platform.
