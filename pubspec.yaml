@@ -1,7 +1,7 @@
 name: gmt
 description: Get current datetime in GMT from internet (example.com or google.com) and return DateTime in UTC.
-version: 0.2.0
-homepage: https://github.com/fatasin/gmt
+version: 0.2.0+1
+homepage: https://github.com/softs-dev/gmt
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

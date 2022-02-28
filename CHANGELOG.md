@@ -1,3 +1,7 @@
+## 0.2.0+1
+
+* Update homepage
+
 ## 0.2.0
 
 * Bug fixed: Error on web platform.
