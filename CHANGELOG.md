@@ -1,3 +1,9 @@
+## 0.3.0:
+Added new parameters to `GMT.now()`:
+
+* urls: List of URLs to get the current date and time. This does nothing on the Web platform.
+* timeoutOfEach: Timeout of each URL.
+
 ## 0.2.0+1
 
 * Update homepage

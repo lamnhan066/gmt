@@ -3,30 +3,38 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 
 class GMTIpl {
-  static Future<String?> now() async {
+  static Future<String?> now({
+    List<String> urls = const [
+      'https://www.example.com',
+      'https://www.google.com',
+    ],
+    Duration? timeoutOfEach,
+  }) async {
     http.Response? response;
-    try {
-      response = await http.get(Uri.parse('https://www.example.com'));
 
-      if (response.statusCode != 200) {
-        throw Exception('GMT get statusCode != 200');
-      }
-    } catch (e) {
-      print(
-          'GMT get from example.com error: $e\nGMT try to get from gooogle.com...');
+    for (final url in urls) {
       try {
-        response = await http.get(Uri.parse('https://www.google.com'));
+        if (timeoutOfEach != null) {
+          response = await http.get(Uri.parse(url)).timeout(timeoutOfEach);
+        } else {
+          response = await http.get(Uri.parse(url));
+        }
 
         if (response.statusCode != 200) {
-          throw Exception('GMT get statusCode != 200');
+          response = null;
+          throw Exception('[GMT] error: get from $url statusCode != 200');
         }
-      } catch (e1) {
-        print(
-            'GMT get from google.com error: $e1\nGMT can\'t get DateTime from internet!!!');
+
+        print('[GMT] get from $url successfully');
+
+        break;
+      } catch (e) {
+        print('[GMT] error: get from $url error: $e');
       }
     }
+
     String? dateTime = response?.headers['date'];
-    if (response != null && response.statusCode == 200 && dateTime != null) {
+    if (dateTime != null && response!.statusCode == 200) {
       return dateTime;
     } else {
       return null;
