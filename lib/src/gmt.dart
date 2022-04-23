@@ -1,5 +1,7 @@
-import 'package:universal_io/io.dart';
 import 'dart:async';
+
+import 'package:universal_io/io.dart';
+
 import 'gmt_web.dart' if (dart.library.io) 'gmt_stub.dart';
 
 class GMT {
