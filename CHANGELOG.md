@@ -1,4 +1,11 @@
-## 0.3.0:
+## 0.3.1
+
+* Added example to improve the scores.
+* Upgrade dependencies.
+* Update homepage.
+
+## 0.3.0
+
 Added new parameters to `GMT.now()`:
 
 * urls: List of URLs to get the current date and time. This does nothing on the Web platform.
