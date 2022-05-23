@@ -5,6 +5,9 @@ import 'package:universal_io/io.dart';
 import 'gmt_web.dart' if (dart.library.io) 'gmt_stub.dart';
 
 class GMT {
+  /// Only use this class as static.
+  GMT._();
+
   /// Get current datetime in GMT from internet (example.com, google.com or your own urls)
   /// and return DateTime in UTC.
   ///

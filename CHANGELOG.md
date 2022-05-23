@@ -1,3 +1,8 @@
+## 0.4.0
+
+* Avoid creating a new instance of `GMT`.
+* Updated dependencies.
+
 ## 0.3.1
 
 * Added example to improve the scores.
