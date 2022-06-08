@@ -1,8 +1,9 @@
 import 'dart:async';
 
+import 'package:gmt/src/utils.dart';
 import 'package:http/http.dart' as http;
 
-class GMTIpl {
+class GMTImpl {
   static Future<String?> now({
     List<String> urls = const [
       'https://www.example.com',
@@ -22,14 +23,14 @@ class GMTIpl {
 
         if (response.statusCode != 200) {
           response = null;
-          throw Exception('[GMT] error: get from $url statusCode != 200');
+          throw Exception('[GMT] ERROR: Get from $url statusCode != 200');
         }
 
-        print('[GMT] get from $url successfully');
+        printDebug('Get from $url successfully');
 
         break;
       } catch (e) {
-        print('[GMT] error: get from $url error: $e');
+        printDebug('ERROR: Get from $url error: $e');
       }
     }
 

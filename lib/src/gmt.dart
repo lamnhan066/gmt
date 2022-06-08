@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:gmt/src/utils.dart';
 import 'package:universal_io/io.dart';
 
 import 'gmt_web.dart' if (dart.library.io) 'gmt_stub.dart';
@@ -19,6 +20,8 @@ class GMT {
   ///
   /// [returnLocalIfError] == true: Return local [DateTime.now()] if error or timeout.
   /// [returnLocalIfError] == false: Return [null] if error or timeout.
+  ///
+  /// [isDebug] Allow print debug text
   static Future<DateTime?> now({
     List<String> urls = const [
       'https://www.example.com',
@@ -27,17 +30,20 @@ class GMT {
     Duration? timeoutOfEach,
     Duration? timeout,
     bool returnLocalIfError = false,
+    bool isDebug = false,
   }) async {
+    isDebugMode = isDebug;
+
     String? now;
     try {
       if (timeout != null) {
-        now = await GMTIpl.now(urls: urls, timeoutOfEach: timeoutOfEach)
+        now = await GMTImpl.now(urls: urls, timeoutOfEach: timeoutOfEach)
             .timeout(timeout, onTimeout: () => null);
       } else {
-        now = await GMTIpl.now(urls: urls, timeoutOfEach: timeoutOfEach);
+        now = await GMTImpl.now(urls: urls, timeoutOfEach: timeoutOfEach);
       }
     } catch (e) {
-      print('[GMT] error: $e');
+      printDebug('ERROR: $e');
     }
     if (now == null && returnLocalIfError) {
       return DateTime.now().toUtc();

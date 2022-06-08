@@ -1,3 +1,8 @@
+## 0.5.0
+
+* Allow enable/disable debug text.
+* Update dependencies.
+
 ## 0.4.0
 
 * Avoid creating a new instance of `GMT`.
