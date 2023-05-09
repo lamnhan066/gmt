@@ -1,3 +1,9 @@
+## 0.6.0
+
+* Bump min sdk version to `2.17.0`.
+* Update dependencies.
+* Update homepage URL.
+
 ## 0.5.0
 
 * Allow enable/disable debug text.
