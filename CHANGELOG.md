@@ -1,3 +1,8 @@
+## 0.7.0
+
+* Bump sdk version to `>=2.18.0 <4.0.0`.
+* Bump `http` to `1.0.0`.
+
 ## 0.6.0
 
 * Bump min sdk version to `2.17.0`.
