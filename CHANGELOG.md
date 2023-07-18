@@ -1,3 +1,8 @@
+## 0.7.1
+
+* Change the way to request from `Get` to `Head`.
+* Bump `http` to `1.1.0`.
+
 ## 0.7.0
 
 * Bump sdk version to `>=2.18.0 <4.0.0`.

@@ -15,9 +15,9 @@ class GMTImpl {
 
     try {
       if (timeoutOfEach != null) {
-        response = await http.get(Uri.base).timeout(timeoutOfEach);
+        response = await http.head(Uri.base).timeout(timeoutOfEach);
       } else {
-        response = await http.get(Uri.base);
+        response = await http.head(Uri.base);
       }
 
       if (response.statusCode != 200) {

@@ -16,9 +16,9 @@ class GMTImpl {
     for (final url in urls) {
       try {
         if (timeoutOfEach != null) {
-          response = await http.get(Uri.parse(url)).timeout(timeoutOfEach);
+          response = await http.head(Uri.parse(url)).timeout(timeoutOfEach);
         } else {
-          response = await http.get(Uri.parse(url));
+          response = await http.head(Uri.parse(url));
         }
 
         if (response.statusCode != 200) {
