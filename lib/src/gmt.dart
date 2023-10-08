@@ -21,7 +21,7 @@ class GMT {
   /// [returnLocalIfError] == true: Return local [DateTime.now()] if error or timeout.
   /// [returnLocalIfError] == false: Return [null] if error or timeout.
   ///
-  /// [isDebug] Allow print debug text
+  /// [isDebug] Allow print debug text.
   static Future<DateTime?> now({
     List<String> urls = const [
       'https://www.example.com',

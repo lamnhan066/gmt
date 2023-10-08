@@ -1,7 +1,7 @@
 name: gmt
 description: Get current datetime in GMT from internet (example.com, google.com or your own urls) and return DateTime in UTC.
-version: 0.7.1
-homepage: https://github.com/vnniz/gmt
+version: 0.7.2
+homepage: https://github.com/lamnhan066/gmt
 
 environment:
   sdk: ">=2.18.0 <4.0.0"

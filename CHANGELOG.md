@@ -1,3 +1,8 @@
+## 0.7.2
+
+* Update comments.
+* Update homepage URL.
+
 ## 0.7.1
 
 * Change the way to request from `Get` to `Head`.
