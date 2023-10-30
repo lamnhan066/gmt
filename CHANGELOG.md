@@ -1,3 +1,7 @@
+## 0.7.3
+
+* Add the web platform.
+
 ## 0.7.2
 
 * Update comments.
