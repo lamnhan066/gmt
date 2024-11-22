@@ -24,8 +24,11 @@ class GMT {
   /// [isDebug] Allow print debug text.
   static Future<DateTime?> now({
     List<String> urls = const [
+      'https://1.1.1.1',
+      'https://1.0.0.1',
+      'https://8.8.8.8',
+      'https://8.8.4.4',
       'https://www.example.com',
-      'https://www.google.com',
     ],
     Duration? timeoutOfEach,
     Duration? timeout,
