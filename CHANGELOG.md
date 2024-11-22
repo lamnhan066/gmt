@@ -1,3 +1,12 @@
+## 0.8.0
+
+* Change the default URL to:
+  * 1.1.1.1
+  * 1.0.0.1
+  * 8.8.8.8
+  * 8.8.4.4
+  * example.com
+
 ## 0.7.3
 
 * Add the web platform.
