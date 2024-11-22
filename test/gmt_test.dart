@@ -7,10 +7,6 @@ void main() {
   test('test GMT.now', () async {
     final timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
       final time = await GMT.now(
-        urls: [
-          'https://www.example.com',
-          'https://www.google.com',
-        ],
         timeoutOfEach: Duration(seconds: 1),
       );
 
